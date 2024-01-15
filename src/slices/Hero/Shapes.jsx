@@ -25,7 +25,7 @@ export function Shapes() {
             blur={1}
             far={9}
           />
-          <Environment preset="studio" />
+          <Environment preset="sunset" />
         </Suspense>
       </Canvas>
     </div>
