@@ -85,6 +85,17 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
    * Meta Description field in *Page*
    *
    * - **Field Type**: Text
@@ -92,7 +103,7 @@ interface PageDocumentData {
    * - **API ID Path**: page.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
+   */
   meta_description: prismic.KeyTextField;
 
   /**
@@ -105,17 +116,6 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
 }
 
 /**
@@ -131,11 +131,11 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 /**
- * Item in *settings → Nav Item*
+ * Item in *Settings → Nav Item*
  */
 export interface SettingsDocumentDataNavItemItem {
   /**
-   * link field in *settings → Nav Item*
+   * Link field in *Settings → Nav Item*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -145,7 +145,7 @@ export interface SettingsDocumentDataNavItemItem {
   link: prismic.LinkField;
 
   /**
-   * label field in *settings → Nav Item*
+   * Label field in *Settings → Nav Item*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -156,11 +156,11 @@ export interface SettingsDocumentDataNavItemItem {
 }
 
 /**
- * Content for settings documents
+ * Content for Settings documents
  */
 interface SettingsDocumentData {
   /**
-   * Name field in *settings*
+   * Name field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -171,7 +171,7 @@ interface SettingsDocumentData {
   name: prismic.KeyTextField;
 
   /**
-   * Nav Item field in *settings*
+   * Nav Item field in *Settings*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -182,7 +182,7 @@ interface SettingsDocumentData {
   nav_item: prismic.GroupField<Simplify<SettingsDocumentDataNavItemItem>>;
 
   /**
-   * CTA Link field in *settings*
+   * CTA Link field in *Settings*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -193,7 +193,7 @@ interface SettingsDocumentData {
   cta_link: prismic.LinkField;
 
   /**
-   * CTA Label  field in *settings*
+   * CTA Label  field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -204,7 +204,7 @@ interface SettingsDocumentData {
   cta_label: prismic.KeyTextField;
 
   /**
-   * Twitter link field in *settings*
+   * Twitter link field in *Settings*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -215,7 +215,7 @@ interface SettingsDocumentData {
   twitter_link: prismic.LinkField;
 
   /**
-   * Linkedin field in *settings*
+   * Linkedin field in *Settings*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -226,50 +226,50 @@ interface SettingsDocumentData {
   linkedin: prismic.LinkField;
 
   /**
-   * Github field in *settings*
+   * Github link field in *Settings*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.github
+   * - **API ID Path**: settings.github_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  github: prismic.LinkField /**
-   * Meta Title field in *settings*
+  github_link: prismic.LinkField /**
+   * Meta Title field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: settings.meta_title
-   * - **Tab**: SEO and metadata
+   * - **Tab**: SEO and Meta data
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *settings*
+   * Meta Description field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: settings.meta_description
-   * - **Tab**: SEO and metadata
+   * - **Tab**: SEO and Meta data
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_description: prismic.KeyTextField;
 
   /**
-   * OG Image field in *settings*
+   * OG Image field in *Settings*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
    * - **API ID Path**: settings.og_image
-   * - **Tab**: SEO and metadata
+   * - **Tab**: SEO and Meta data
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   og_image: prismic.ImageField<never>;
 }
 
 /**
- * settings document from Prismic
+ * Settings document from Prismic
  *
  * - **API ID**: `settings`
  * - **Repeatable**: `false`

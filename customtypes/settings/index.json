@@ -1,6 +1,6 @@
 {
   "id": "settings",
-  "label": "settings",
+  "label": "Settings",
   "format": "custom",
   "repeatable": false,
   "status": true,
@@ -21,7 +21,7 @@
             "link": {
               "type": "Link",
               "config": {
-                "label": "link",
+                "label": "Link",
                 "placeholder": "",
                 "select": null
               }
@@ -29,7 +29,7 @@
             "label": {
               "type": "Text",
               "config": {
-                "label": "label",
+                "label": "Label",
                 "placeholder": ""
               }
             }
@@ -67,16 +67,16 @@
           "select": null
         }
       },
-      "github": {
+      "github_link": {
         "type": "Link",
         "config": {
-          "label": "Github",
+          "label": "Github link",
           "placeholder": "",
           "select": null
         }
       }
     },
-    "SEO and metadata": {
+    "SEO and Meta data": {
       "meta_title": {
         "type": "Text",
         "config": {

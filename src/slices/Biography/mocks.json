@@ -14,7 +14,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Cupidatat duis nulla proident veniam ut id sit commodo ad mollit nostrud ex."
+							"text": "Nostrud dolor sit do dolore reprehenderit aute esse exercitation veniam ex aliquip anim culpa sunt."
 						}
 					}
 				]
@@ -32,7 +32,6 @@
 				}
 			},
 			"avatar": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
@@ -50,6 +49,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
